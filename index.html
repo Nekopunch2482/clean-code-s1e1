@@ -7,47 +7,47 @@
   </head>
   <body>
     <div class="header">
-      <img src="./eisenhower-matrix.jpg">
+      <img class="header-image" src="./eisenhower-matrix.jpg">
       <a class="more-info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </div>
     <div class="main-content">
       <p id="task-add">
-        <label for="task-add-input">Add Item</label>
+        <label class="task-add-text" for="task-add-input">Add Item</label>
         <div class="flex">
-          <input id="task-add-input"class="flex-grow" type="text">
-          <button>Add</button>
+          <input id="task-add-input"class="input flex-grow" type="text">
+          <button id ="task-add-button" class="button">Add</button>
         </div>
       </p>
-      <h3>Todo</h3>
+      <h3 class="title">Todo</h3>
       <ul id="task-list-incomplete">
-        <li>
-          <input type="checkbox">
-          <label class="flex-grow">Pay Bills</label>
-          <input type="text" class="flex-grow">
-          <button class="task-edit">Edit</button>
-          <button class="task-delete">
-            <img src="./remove.svg">
+        <li class="task">
+          <input class="task-status" type="checkbox">
+          <label class="task-text flex-grow">Pay Bills</label>
+          <input type="text" class="task-input input flex-grow">
+          <button class="task-edit button">Edit</button>
+          <button class="task-delete button button-delete">
+            <img class="button-image" src="./remove.svg">
           </button>
         </li>
-        <li class="task-editable">
-          <input type="checkbox">
-          <label class="flex-grow">Go Shopping</label>
-          <input type="text" value="Go Shopping" class="flex-grow">
-          <button class="task-edit">Save</button>
-          <button class="task-delete">
-            <img src="./remove.svg">
+        <li class="task task-editable">
+          <input class="task-status" type="checkbox">
+          <label class="task-text flex-grow">Go Shopping</label>
+          <input type="text" value="Go Shopping" class="task-input input flex-grow">
+          <button class="task-edit button">Save</button>
+          <button class="task-delete button button-delete">
+            <img class="button-image" src="./remove.svg">
           </button>
         </li>
       </ul>
-      <h3>Completed</h3>
+      <h3 class="title">Completed</h3>
       <ul id="task-list-completed">
-        <li>
-          <input type="checkbox" checked>
-          <label class="flex-grow">See the Doctor</label>
-          <input type="text" class="flex-grow">
-          <button class="task-edit">Edit</button>
-          <button class="task-delete">
-            <img src="./remove.svg">
+        <li class="task">
+          <input class="task-status" type="checkbox" checked>
+          <label class="task-text flex-grow">See the Doctor</label>
+          <input type="text" class="task-input input flex-grow">
+          <button class="task-edit button">Edit</button>
+          <button class="task-delete button button-delete">
+            <img class="button-image" src="./remove.svg">
           </button>
         </li>
       </ul>
