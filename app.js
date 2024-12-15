@@ -31,6 +31,7 @@ var createNewTaskElement=function(taskString){
   //button.task-delete
   var deleteButton=document.createElement("button");//delete button
   var deleteButtonImg=document.createElement("img");//delete button image
+  deleteButtonImg.alt="remove todo item button";
 
   listItem.className="task";
 
