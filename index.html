@@ -7,37 +7,39 @@
   </head>
   <body>
     <header class="header">
-      <img alt="image explaining Eisenhower Matrix" class="header-image" src="./eisenhower-matrix.jpg">
-      <a class="more-info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+      <img class="header__image" alt="image explaining Eisenhower Matrix" src="./eisenhower-matrix.jpg">
+      <a class="header__more-info" href="https://goal-life.com/page/method/matrix-eisenhower">
+        Want more details?
+      </a>
     </header>
     <main class="main-content">
       <h1>Todo app</h1>
-      <section id="task-add">
-        <h2 class="task-add-text" for="task-add-input">Add Item</h2>
+      <section class="task-add" id="task-add">
+        <h2 class="task-add__title title" for="task-add-input">Add Item</h2>
         <div class="flex">
-          <input id="task-add-input"class="input flex-grow" type="text">
-          <button id ="task-add-button" class="button">Add</button>
+          <input class="task-add__input input flex-grow" id="task-add-input" type="text">
+          <button class="button" id="task-add-button">Add</button>
         </div>
       </section>
       <section>
         <h2 class="title">Todo</h2>
         <ul id="task-list-incomplete">
           <li class="task">
-            <input class="task-status" type="checkbox">
-            <label class="task-text flex-grow">Pay Bills</label>
-            <input type="text" class="task-input input flex-grow">
-            <button class="task-edit button">Edit</button>
-            <button class="task-delete button button-delete">
-              <img alt="remove todo item button" class="button-image" src="./remove.svg">
+            <input class="task__status" type="checkbox">
+            <label class="task__text flex-grow">Pay Bills</label>
+            <input class="task__input input flex-grow" type="text">
+            <button class="task__edit button">Edit</button>
+            <button class="task__delete button button--delete">
+              <img class="button__image" alt="remove todo item button" src="./remove.svg">
             </button>
           </li>
-          <li class="task task-editable">
-            <input class="task-status" type="checkbox">
-            <label class="task-text flex-grow">Go Shopping</label>
-            <input type="text" value="Go Shopping" class="task-input input flex-grow">
-            <button class="task-edit button">Save</button>
-            <button class="task-delete button button-delete">
-              <img alt="remove todo item button" class="button-image" src="./remove.svg">
+          <li class="task task--editable">
+            <input class="task__status" type="checkbox">
+            <label class="task__text flex-grow">Go Shopping</label>
+            <input  class="task__input input flex-grow" type="text" value="Go Shopping">
+            <button class="task__edit button">Save</button>
+            <button class="task__delete button button--delete">
+              <img class="button__image" alt="remove todo item button" src="./remove.svg">
             </button>
           </li>
         </ul>
@@ -46,12 +48,12 @@
         <h2 class="title">Completed</h2>
         <ul id="task-list-completed">
           <li class="task">
-            <input class="task-status" type="checkbox" checked>
-            <label class="task-text flex-grow">See the Doctor</label>
-            <input type="text" class="task-input input flex-grow">
-            <button class="task-edit button">Edit</button>
-            <button class="task-delete button button-delete">
-              <img alt="remove todo item button" class="button-image" src="./remove.svg">
+            <input class="task__status" type="checkbox" checked>
+            <label class="task__text flex-grow">See the Doctor</label>
+            <input class="task__input input flex-grow" type="text">
+            <button class="task__edit button">Edit</button>
+            <button class="task__delete button button--delete">
+              <img class="button__image" alt="remove todo item button" src="./remove.svg">
             </button>
           </li>
         </ul>

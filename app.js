@@ -25,10 +25,10 @@ var createNewTaskElement=function(taskString){
   var label=document.createElement("label");//label
   //input (text)
   var editInput=document.createElement("input");//text
-  //button.task-edit
+  //button.task__edit
   var editButton=document.createElement("button");//edit button
 
-  //button.task-delete
+  //button.task__delete
   var deleteButton=document.createElement("button");//delete button
   var deleteButtonImg=document.createElement("img");//delete button image
   deleteButtonImg.alt="remove todo item button";
@@ -36,20 +36,20 @@ var createNewTaskElement=function(taskString){
   listItem.className="task";
 
   label.innerText=taskString;
-  label.className='task-text flex-grow';
+  label.className='task__text flex-grow';
 
   //Each elements, needs appending
   checkBox.type="checkbox";
-  checkBox.className="task-status";
+  checkBox.className="task__status";
   editInput.type="text";
-  editInput.className="task-input input flex-grow";
+  editInput.className="task__input input flex-grow";
 
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className="task-edit button";
+  editButton.className="task__edit button";
 
-  deleteButton.className="task-delete button button-delete";
+  deleteButton.className="task__delete button button--delete";
   deleteButtonImg.src='./remove.svg';
-  deleteButtonImg.className="button-image";
+  deleteButtonImg.className="button__image";
   deleteButton.appendChild(deleteButtonImg);
 
 
@@ -87,14 +87,14 @@ var editTask=function(){
 
   var listItem=this.parentNode;
 
-  var editInput=listItem.querySelector('.task-input');
-  var label=listItem.querySelector(".task-text");
-  var editBtn=listItem.querySelector(".task-edit");
-  var containsClass=listItem.classList.contains("task-editable");
-  //If class of the parent is .task-editable
+  var editInput=listItem.querySelector('.task__input');
+  var label=listItem.querySelector(".task__text");
+  var editBtn=listItem.querySelector(".task__edit");
+  var containsClass=listItem.classList.contains("task--editable");
+  //If class of the parent is .task--editable
   if(containsClass){
 
-    //switch to .task-editable
+    //switch to .task--editable
     //label becomes the inputs value.
     label.innerText=editInput.value;
     editBtn.innerText="Edit";
@@ -103,8 +103,8 @@ var editTask=function(){
     editBtn.innerText="Save";
   }
 
-  //toggle .task-editable on the parent.
-  listItem.classList.toggle("task-editable");
+  //toggle .task--editable on the parent.
+  listItem.classList.toggle("task--editable");
 };
 
 
@@ -160,9 +160,9 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
   //select ListItems children
-  var checkBox=taskListItem.querySelector(".task-status");
-  var editButton=taskListItem.querySelector(".task-edit");
-  var deleteButton=taskListItem.querySelector(".task-delete");
+  var checkBox=taskListItem.querySelector(".task__status");
+  var editButton=taskListItem.querySelector(".task__edit");
+  var deleteButton=taskListItem.querySelector(".task__delete");
 
 
   //Bind editTask to edit button.
